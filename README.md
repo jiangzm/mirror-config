@@ -1,11 +1,8 @@
-mirror-config-china
-===========
 
-[![NPM version](https://img.shields.io/npm/v/mirror-config-china.svg?style=flat-square)](https://www.npmjs.com/package/mirror-config-china)
-[![Travis](https://img.shields.io/travis/gucong3000/mirror-config-china.svg?&label=Linux)](https://travis-ci.org/gucong3000/mirror-config-china)
-[![AppVeyor](https://img.shields.io/appveyor/ci/gucong3000/mirror-config-china.svg?&label=Windows)](https://ci.appveyor.com/project/gucong3000/mirror-config-china)
-[![codecov](https://img.shields.io/codecov/c/github/gucong3000/mirror-config-china.svg)](https://codecov.io/gh/gucong3000/mirror-config-china)
-[![David](https://img.shields.io/david/gucong3000/mirror-config-china.svg)](https://david-dm.org/gucong3000/mirror-config-china)
+[![NPM version](https://img.shields.io/npm/v/mirror-config.svg?style=flat-square)](https://www.npmjs.com/package/mirror-config)
+[![Travis](https://img.shields.io/travis/jiangzm/mirror-config.svg?&label=Linux)](https://travis-ci.org/jiangzm/mirror-config)
+[![AppVeyor](https://img.shields.io/appveyor/ci/jiangzm/mirror-config.svg?&label=Windows)](https://ci.appveyor.com/project/jiangzm/mirror-config)
+[![codecov](https://img.shields.io/codecov/c/github/jiangzm/mirror-config.svg)](https://codecov.io/gh/jiangzm/mirror-config)
 
 为中国内地的Node.js开发者准备的镜像配置，大大提高node模块安装速度。
 
@@ -17,7 +14,7 @@ mirror-config-china
 ## 安装
 
 ```bash
-npm i -g mirror-config-china --registry=https://registry.npm.taobao.org
+npm i -g mirror-config --registry=https://registry.npmmirror.com
 # 查看npm配置
 npm config list
 # 查看环境变量
@@ -26,11 +23,11 @@ source ~/.bashrc && env
 
 ## 参数
 
-### `--registry=https://registry.npm.taobao.org`
+### `--registry=https://registry.npmmirror.com`
 registry.npmjs.com 镜像URL
 
-### `--bin-mirrors-prefix=https://npm.taobao.org/mirrors`
-npm.taobao.org/mirrors 镜像URL，会覆盖下文中的`{bin-mirrors}`
+### `--bin-mirrors-prefix=https://cdn.npmmirror.com/binaries`
+cdn.npmmirror.com/binaries 镜像URL，会覆盖下文中的`{bin-mirrors}`
 
 ### `--apt-mirrors-prefix=https://mirrors.tuna.tsinghua.edu.cn`
 mirrors.tuna.tsinghua.edu.cn 镜像URL，会覆盖下文中的`{apt-mirrors}`
@@ -92,5 +89,13 @@ github.com/npm/npm/releases 镜像URL
 
 ```
 cd ~/my-project
-mirror-config-china --registry=https://registry.npm.taobao.org
+mirror-config --registry=https://registry.npmmirror.com
+
+```
+
+## Docker构建时使用
+
+```dockerfile
+RUN npm config set registry https://registry.npmmirror.com && npm install --unsafe-perm -g mirror-config
+RUN npm ci
 ```

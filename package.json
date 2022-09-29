@@ -1,10 +1,10 @@
 {
-  "author": "gucong3000",
+  "author": "jiangzm",
   "bin": {
-    "mirror-config-china": "lib/cli.js"
+    "mirror-config": "lib/cli.js"
   },
   "bugs": {
-    "url": "https://github.com/gucong3000/mirror-config-china/issues"
+    "url": "https://github.com/jiangzm/mirror-config/issues"
   },
   "dependencies": {
     "fs-extra": "^7.0.0",
@@ -24,16 +24,18 @@
     "nyc": "^13.0.1",
     "proxyquire": "^2.1.0"
   },
-  "homepage": "https://github.com/gucong3000/mirror-config-china#readme",
+  "homepage": "https://github.com/jiangzm/mirror-config#readme",
   "keywords": [
     "node",
     "mirros",
-    "china",
-    "config"
+    "npmmirror",
+    "binarymirror",
+    "mirror-config",
+    "mirror-config-china"
   ],
   "license": "MIT",
   "main": "./index.js",
-  "name": "mirror-config-china",
+  "name": "mirror-config",
   "nyc": {
     "reporter": [
       "lcov",
@@ -43,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gucong3000/mirror-config-china.git"
+    "url": "git+https://github.com/jiangzm/mirror-config.git"
   },
   "scripts": {
     "install": "node lib/install.js",
@@ -52,5 +54,5 @@
     "install-test": "npm run install && npm test",
     "test": "mocha --no-timeouts"
   },
-  "version": "2.6.0"
+  "version": "0.0.1"
 }
