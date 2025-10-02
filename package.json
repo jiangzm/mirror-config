@@ -49,5 +49,5 @@
     "install-test": "npm run install && npm test",
     "test": "mocha --no-timeouts"
   },
-  "version": "0.0.1"
+  "version": "0.1.0"
 }
