@@ -29,13 +29,6 @@ registry.npmjs.com 镜像URL
 ### `--bin-mirrors-prefix=https://cdn.npmmirror.com/binaries`
 cdn.npmmirror.com/binaries 镜像URL，会覆盖下文中的`{bin-mirrors}`
 
-### `--apt-mirrors-prefix=https://mirrors.tuna.tsinghua.edu.cn`
-mirrors.tuna.tsinghua.edu.cn 镜像URL，会覆盖下文中的`{apt-mirrors}`
-
-### `--ali-mirrors-prefix=https://mirrors.aliyun.com`
-mirrors.aliyun.com 镜像URL，会覆盖下文中的`{ali-mirrors}`
-阿里云ECS VPC或经典网络用户请分别使用`http://mirrors.cloud.aliyuncs.com`或`http://mirrors.aliyuncs.com`代替
-
 ### `--nodejs-org-mirror={bin-mirrors}/node` (别名: `--disturl`)
 nodejs.org/dist 镜像URL
 
@@ -44,24 +37,6 @@ iojs.org/dist 镜像URL
 
 ### `--nvmw-npm-mirror={bin-mirrors}/npm`
 github.com/npm/npm/releases 镜像URL
-
-### `--apt-mirror={ali-mirrors}`
-[Debian](https://www.debian.org/mirror/list)/[Ubuntu](https://www.ubuntu.com/index_kylin) APT镜像URL
-
-### `--apt-gitlab-runner={apt-mirrors}/gitlab-runner/{release-id}`
-[GitLab Runner](https://docs.gitlab.com/runner/install/linux-repository.html#installing-the-runner) APT镜像URL
-
-### `--apt-docker-ce={ali-mirrors}/docker-ce/linux/{release-id}`
-[Docker](https://docs.docker.com/install/linux/docker-ce/debian/#install-docker-ce-1)社区版 APT镜像URL
-
-### `--apt-gitlab-ce={apt-mirrors}/gitlab-ce/{release-id}`
-[GitLab](https://about.gitlab.com/installation/)社区版 APT镜像URL
-
-### `--apt-virtualbox={apt-mirrors}/virtualbox/apt`
-[VirtualBox](https://www.virtualbox.org/) APT镜像URL
-
-### `--apt-nodesource={apt-mirrors}/nodesource/deb`
-[NodeJS](https://nodejs.org/zh-cn/download/package-manager/#linux-debian-ubuntu) APT镜像URL前缀
 
 ### 其他
 其他参数将被写入`.npmrc`文件中
@@ -74,7 +49,7 @@ github.com/npm/npm/releases 镜像URL
 - [node-gyp](https://www.npmjs.com/package/node-gyp)
 - [node-inspector](https://www.npmjs.com/package/node-inspector)
 - [node-sass](https://www.npmjs.com/package/node-sass)
-- [node-sqlite3](https://www.npmjs.com/package/node-sqlite3)
+- [sqlite3](https://www.npmjs.com/package/sqlite3)
 - [nodegit](https://www.npmjs.com/package/nodegit)
 - [nodist](https://github.com/marcelklehr/nodist)
 - [nvm-windows](https://github.com/coreybutler/nvm-windows)
@@ -84,6 +59,7 @@ github.com/npm/npm/releases 镜像URL
 - [Puppeteer](https://www.npmjs.com/package/puppeteer)
 - [selenium-standalone](https://www.npmjs.com/package/selenium-standalone)
 - [windows-build-tools](https://www.npmjs.com/package/windows-build-tools)
+- [@swc/core](https://www.npmjs.com/package/@swc/core)
 
 ## 为项目生成镜像配置文件
 
